@@ -39,7 +39,7 @@ const chartConfig = {
 
 export function AreaGraph() {
   return (
-    <Card>
+    <Card className="rounded-xl">
       <CardHeader>
         <CardTitle>Lucro</CardTitle>
         <CardDescription>

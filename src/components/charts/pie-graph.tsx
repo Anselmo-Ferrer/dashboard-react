@@ -58,7 +58,7 @@ export function PieGraph() {
   }, []);
 
   return (
-    <Card className="flex flex-col">
+    <Card className="flex flex-col rounded-xl">
       <CardHeader className="items-center pb-0">
         <CardTitle>Horarios mais visitados</CardTitle>
         <CardDescription>Janeiro - Junho 2024</CardDescription>

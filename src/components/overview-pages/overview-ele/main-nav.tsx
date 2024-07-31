@@ -13,25 +13,31 @@ export function MainNav({
         href="/examples/dashboard"
         className="text-sm font-medium transition-colors hover:text-primary"
       >
-        Overview
+        Geral
       </a>
       <a
         href="/examples/dashboard"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Customers
+        Clientes
       </a>
       <a
         href="/examples/dashboard"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Products
+        Vendas
       </a>
       <a
         href="/examples/dashboard"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
-        Settings
+        Gerenciamento
+      </a>
+      <a
+        href="/examples/dashboard"
+        className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+      >
+        Ajustes
       </a>
     </nav>
   )

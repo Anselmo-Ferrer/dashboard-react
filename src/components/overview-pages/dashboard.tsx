@@ -6,7 +6,7 @@ import { PieGraph } from "../charts/pie-graph"
 import { AreaGraph } from "../charts/area-graph"
 import Dashboardcard from "./overview-ele/dashboardcard"
 
-function OverviewPage() {
+function DashboardPage() {
   return (
     <TabsContent value="overview" className="space-y-4">
     <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -19,7 +19,7 @@ function OverviewPage() {
       <div className="col-span-4">
         <BarGraph />
       </div>
-      <Card className="col-span-4 md:col-span-3">
+      <Card className="col-span-4 md:col-span-3 rounded-xl">
         <CardHeader>
           <CardTitle>Vendas</CardTitle>
           <CardDescription>
@@ -41,4 +41,4 @@ function OverviewPage() {
   )
 }
 
-export default OverviewPage
+export default DashboardPage

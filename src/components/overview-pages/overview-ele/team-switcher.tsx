@@ -18,16 +18,16 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from ".
 
 const groups = [
   {
-    label: "Personal Account",
+    label: "Minha conta",
     teams: [
       {
-        label: "Alicia Koch",
+        label: "Alex Ferdere",
         value: "personal",
       },
     ],
   },
   {
-    label: "Teams",
+    label: "Funcionarios",
     teams: [
       {
         label: "Acme Inc.",
@@ -63,7 +63,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
             role="combobox"
             aria-expanded={open}
             aria-label="Select a team"
-            className={cn("w-[200px] justify-between", className)}
+            className={cn("w-[200px] justify-between rounded-xl", className)}
           >
             <Avatar className="mr-2 h-5 w-5">
               <AvatarImage
@@ -71,7 +71,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                 alt={selectedTeam.label}
                 className="grayscale"
               />
-              <AvatarFallback>SC</AvatarFallback>
+              <AvatarFallback>AF</AvatarFallback>
             </Avatar>
             {selectedTeam.label}
             <CaretSortIcon className="ml-auto h-4 w-4 shrink-0 opacity-50" />
@@ -80,8 +80,8 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
         <PopoverContent className="w-[200px] p-0">
           <Command>
             <CommandList>
-              <CommandInput placeholder="Search team..." />
-              <CommandEmpty>No team found.</CommandEmpty>
+              <CommandInput placeholder="Pesquisar..." />
+              <CommandEmpty>Sem resultado.</CommandEmpty>
               {groups.map((group) => (
                 <CommandGroup key={group.label} heading={group.label}>
                   {group.teams.map((team) => (
@@ -126,7 +126,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                     }}
                   >
                     <PlusCircledIcon className="mr-2 h-5 w-5" />
-                    Create Team
+                    Adicionar funcionario
                   </CommandItem>
                 </DialogTrigger>
               </CommandGroup>
@@ -136,9 +136,9 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
       </Popover>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Create team</DialogTitle>
+          <DialogTitle>Adicionar Funcionario</DialogTitle>
           <DialogDescription>
-            Add a new team to manage products and customers.
+          Adicione um novo funcionario para gerenciar produtos e clientes
           </DialogDescription>
         </DialogHeader>
         <div>
@@ -155,15 +155,15 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
                 </SelectTrigger>
                 <SelectContent>
                   <SelectItem value="free">
-                    <span className="font-medium">Free</span> -{" "}
+                    <span className="font-medium">Gratis</span> -{" "}
                     <span className="text-muted-foreground">
-                      Trial for two weeks
+                      Teste por duas semanas
                     </span>
                   </SelectItem>
                   <SelectItem value="pro">
                     <span className="font-medium">Pro</span> -{" "}
                     <span className="text-muted-foreground">
-                      $9/month per user
+                      R$9/mes por usuario
                     </span>
                   </SelectItem>
                 </SelectContent>
@@ -173,7 +173,7 @@ export default function TeamSwitcher({ className }: TeamSwitcherProps) {
         </div>
         <DialogFooter>
           <Button variant="outline" onClick={() => setShowNewTeamDialog(false)}>
-            Cancel
+            Cancelar
           </Button>
           <Button type="submit">Continue</Button>
         </DialogFooter>
