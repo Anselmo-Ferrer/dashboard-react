@@ -8,10 +8,14 @@ import {
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
 import { TabsContent } from "@radix-ui/react-tabs"
+import Header from "../header/header"
 
 function SellersPage() {
   return (
     <TabsContent value="sellers" className="space-y-4">
+      
+      <Header />
+
             <Table>
                         <TableHeader>
                           <TableRow>

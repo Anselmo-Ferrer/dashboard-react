@@ -1,7 +1,7 @@
-import { MainNav } from "./overview-pages/overview-ele/main-nav";
-import { Search } from "./overview-pages/overview-ele/search";
-import TeamSwitcher from "./overview-pages/overview-ele/team-switcher";
-import { UserNav } from "./overview-pages/overview-ele/user-nav";
+import { MainNav } from "./main-nav";
+import { Search } from "./search";
+import TeamSwitcher from "./team-switcher";
+import { UserNav } from "./user-nav";
 
 function Header() {
   return (
