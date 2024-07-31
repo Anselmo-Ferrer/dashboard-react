@@ -1,4 +1,4 @@
-import Salescard from "./sales/sales-card";
+import Salescard from "./sales-card";
 
 export function RecentSales() {
   return (

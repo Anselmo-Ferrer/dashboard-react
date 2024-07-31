@@ -9,10 +9,10 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { TabsContent } from "@radix-ui/react-tabs"
 
-function ClientsPage() {
+function SellersPage() {
   return (
-    <TabsContent value="clients" className="space-y-4">
-      <Table>
+    <TabsContent value="sellers" className="space-y-4">
+            <Table>
                         <TableHeader>
                           <TableRow>
                             <TableHead>Cliente</TableHead>
@@ -238,4 +238,4 @@ function ClientsPage() {
   )
 }
 
-export default ClientsPage
+export default SellersPage

@@ -1,12 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../ui/card";
 
-type MaincardProps = {
+type DashboardcardProps = {
   title: string;
   balance: string;
   desc: string;
 };
 
-const Maincard = ({ title, balance, desc }: MaincardProps) => {
+const Dashboardcard = ({ title, balance, desc }: DashboardcardProps) => {
   return (
     <Card>
                 <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
@@ -36,4 +36,4 @@ const Maincard = ({ title, balance, desc }: MaincardProps) => {
   )
 }
 
-export default Maincard
+export default Dashboardcard
