@@ -17,7 +17,6 @@ function AdministrationPage() {
       <Header/>
 
       <Tabs>
-        <TabsContent value="administration" className="space-y-4">
           <Card>
           <CardHeader>
             <CardTitle>Funcionarios</CardTitle>
@@ -192,7 +191,6 @@ function AdministrationPage() {
             </div>
           </CardContent>
         </Card>
-        </TabsContent>
       </Tabs>
     </PageContainer>
   )

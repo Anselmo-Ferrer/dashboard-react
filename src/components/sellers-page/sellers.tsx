@@ -19,8 +19,8 @@ function SellersPage() {
       <Header />
 
     <Tabs>
-      <TabsContent value="sellers" className="space-y-4">
-        <Table>
+
+            <Table>
                         <TableHeader>
                           <TableRow>
                             <TableHead>Cliente</TableHead>
@@ -242,7 +242,6 @@ function SellersPage() {
                           </TableRow>
                         </TableBody>
                       </Table>
-    </TabsContent>
     </Tabs>
     </PageContainer>
   )
