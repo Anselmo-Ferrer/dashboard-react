@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "../ui/tabs"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "../ui/card"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "../ui/table"
 import { Badge } from "../ui/badge"
+import ClientsCard from "./clients-ele/clients-card"
 
 
 
@@ -23,13 +24,15 @@ function ClientsPage() {
     <PageContainer>
       <Header />
 
+      <div className="flex gap-5 my-5">
+
+        <ClientsCard title="Semanal" value="R$40.543,42" desc="Aumento de 50% em relação a semana passada" progress={87}/>
+        <ClientsCard title="Mensal" value="R$80.543,42" desc="Aumento de 12% em relação ao mes passado" progress={54}/>
+        <ClientsCard title="Anual" value="R$340.543,42" desc="Aumento de 4% em relação ao ano passada" progress={92}/>
+
+      </div>
+
       <div className="flex min-h-screen w-full flex-col">
-
-
-
-
-
-
 
 
       <div className="flex flex-col">
