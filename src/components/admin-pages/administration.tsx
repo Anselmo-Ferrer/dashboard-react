@@ -1,4 +1,3 @@
-import { TabsContent } from "@radix-ui/react-tabs"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover"

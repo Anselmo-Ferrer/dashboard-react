@@ -7,7 +7,6 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Badge } from "@/components/ui/badge"
-import { TabsContent } from "@radix-ui/react-tabs"
 import Header from "../header/header"
 import { Tabs } from "../ui/tabs"
 import PageContainer from "../layout/page-container"
