@@ -1,55 +1,44 @@
-import React from 'react';
-import { cn } from "@/lib/utils";
-
-// Definindo as props para o componente MainNav
-interface MainNavProps extends React.HTMLAttributes<HTMLElement> {
-  className?: string; // classe opcional do tipo string
-}
+import { cn } from "@/lib/utils"
 
 export function MainNav({
   className,
   ...props
-}: MainNavProps) {
-  // Definindo o tipo do parâmetro 'url' como 'string'
-  const handleNavigation = (url: string) => {
-    window.location.href = url; // Muda o URL do navegador
-  };
-
+}: React.HTMLAttributes<HTMLElement>) {
   return (
     <nav
       className={cn("flex items-center space-x-4 lg:space-x-6", className)}
       {...props}
     >
-      <button
-        onClick={() => handleNavigation("/examples/dashboard")}
+      <a
+        href="/"
         className="text-sm font-medium transition-colors hover:text-primary"
       >
-        Início
-      </button>
-      <button
-        onClick={() => handleNavigation("https://www.google.com")}
+        Inicio
+      </a>
+      <a
+        href="/clientes"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Clientes
-      </button>
-      <button
-        onClick={() => handleNavigation("/sellers-page/sellers")}
+      </a>
+      <a
+        href="/vendas"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Vendas
-      </button>
-      <button
-        onClick={() => handleNavigation("/examples/dashboard")}
+      </a>
+      <a
+        href="/gerenciamento"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Gerenciamento
-      </button>
-      <button
-        onClick={() => handleNavigation("/examples/dashboard")}
+      </a>
+      <a
+        href="/ajustes"
         className="text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
       >
         Ajustes
-      </button>
+      </a>
     </nav>
-  );
+  )
 }

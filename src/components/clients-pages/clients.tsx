@@ -1,13 +1,11 @@
 import Header from "../header/header"
-import { TabsContent } from "../ui/tabs"
+import PageContainer from "../layout/page-container"
 
 function ClientsPage() {
   return (
-    <TabsContent value="clients" className="space-y-4">
-
+    <PageContainer>
       <Header />
-
-    </TabsContent>
+    </PageContainer>
   )
 }
 

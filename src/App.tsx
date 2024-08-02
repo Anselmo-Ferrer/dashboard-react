@@ -1,37 +1,15 @@
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Button } from '@/components/ui/button';
-import PageContainer from '@/components/layout/page-container';
-import DashboardPage from './components/overview-pages/dashboard';
-import AnalyticsPage from './components/overview-pages/analytics';
-import { CalendarDateRangePicker } from './components/overview-pages/overview-ele/date-range-picker';
-import Header from './components/header/header';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './components/home-pages/home';
+import ClientsPage from './components/clients-pages/clients';
 
 export default function page() {
   return (
-    <PageContainer scrollable={true}>
-
-      <Header/>
-
-      <div className="space-y-2">
-        <div className="flex items-center justify-between space-y-2">
-          <h2 className="text-2xl font-bold tracking-tight">
-            Dashboard 
-          </h2>
-          <div className="hidden items-center space-x-2 md:flex">
-            <CalendarDateRangePicker />
-            <Button className='rounded-xl'>Importar</Button>
-          </div>
-        </div>
-        <Tabs defaultValue="overview" className="space-y-4">
-          <TabsList className="rounded-xl">
-            <TabsTrigger value="overview" className="rounded-xl">Geral</TabsTrigger>
-            <TabsTrigger value="analytics" className="rounded-xl">Análise</TabsTrigger>
-          </TabsList>
-            <DashboardPage />
-            <AnalyticsPage />
-
-        </Tabs>
-      </div>
-    </PageContainer>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+        <Route path="/clientes" element={<ClientsPage/>}/>
+        <Route path="*" element={<h1 className='text-3xl'>Pagina nao encontrada</h1>}/>
+      </Routes>
+    </BrowserRouter>
   );
 }
