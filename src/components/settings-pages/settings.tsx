@@ -39,11 +39,11 @@ function SettingsPage() {
               </CardHeader>
               <CardContent>
                 <form>
-                  <Input placeholder="Store Name" />
+                  <Input placeholder="Store Name" className="rounded-xl"/>
                 </form>
               </CardContent>
               <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
+                <Button className="rounded-xl">Save</Button>
               </CardFooter>
             </Card>
             <Card x-chunk="A form to update the plugins directory with a checkbox to allow administrators to change the directory." className="rounded-xl">
@@ -59,6 +59,7 @@ function SettingsPage() {
                   <Input
                     placeholder="Project Name"
                     defaultValue="/content/plugins"
+                    className="rounded-xl"
                   />
                   <div className="flex items-center space-x-2">
                     <Checkbox id="include" defaultChecked />
@@ -72,7 +73,7 @@ function SettingsPage() {
                 </form>
               </CardContent>
               <CardFooter className="border-t px-6 py-4">
-                <Button>Save</Button>
+                <Button className="rounded-xl">Save</Button>
               </CardFooter>
             </Card>
           </div>
