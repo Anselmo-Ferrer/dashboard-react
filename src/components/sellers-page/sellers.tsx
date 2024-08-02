@@ -9,14 +9,18 @@ import {
 import { Badge } from "@/components/ui/badge"
 import { TabsContent } from "@radix-ui/react-tabs"
 import Header from "../header/header"
+import { Tabs } from "../ui/tabs"
+import PageContainer from "../layout/page-container"
 
 function SellersPage() {
   return (
-    <TabsContent value="sellers" className="space-y-4">
-      
+    <PageContainer>
+
       <Header />
 
-            <Table>
+    <Tabs>
+      <TabsContent value="sellers" className="space-y-4">
+        <Table>
                         <TableHeader>
                           <TableRow>
                             <TableHead>Cliente</TableHead>
@@ -239,6 +243,8 @@ function SellersPage() {
                         </TableBody>
                       </Table>
     </TabsContent>
+    </Tabs>
+    </PageContainer>
   )
 }
 
