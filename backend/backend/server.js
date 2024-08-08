@@ -10,10 +10,10 @@ app.use(cors());
 
 // Configuração do pool de conexões do PostgreSQL
 const pool = new Pool({
-  user: '',          // Usuário padrão
+  user: 'postgres',          // Usuário padrão
   host: 'localhost',         // Endereço do servidor PostgreSQL
-  database: '', // Nome do banco de dados
-  password: '',     // Sua senha
+  database: 'minha_aplicacao', // Nome do banco de dados
+  password: '12345678',     // Sua senha
   port: 5432,                // Porta padrão do PostgreSQL
 });
 
@@ -21,6 +21,16 @@ const pool = new Pool({
 app.get('/api/usuarios', async (req, res) => {
   try {
     const result = await pool.query('SELECT * FROM usuarios');
+    res.json(result.rows);
+  } catch (error) {
+    console.error('Erro ao buscar usuários:', error);
+    res.status(500).json({ error: 'Erro ao buscar usuários' });
+  }
+});
+
+app.get('/api/movday', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT sum(valor_gasto) as faturamento FROM movday');
     res.json(result.rows);
   } catch (error) {
     console.error('Erro ao buscar usuários:', error);

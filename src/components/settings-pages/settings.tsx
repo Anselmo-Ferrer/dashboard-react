@@ -12,7 +12,7 @@ function SettingsPage() {
 
       <main className="flex min-h-[calc(100vh_-_theme(spacing.16))] flex-1 flex-col gap-4 p-4 md:gap-8 md:p-10">
         <div className="mx-auto grid w-full max-w-6xl gap-2">
-          <h1 className="text-3xl font-semibold">Settings</h1>
+          <h1 className="text-3xl font-semibold">Ajustes</h1>
         </div>
         <div className="mx-auto grid w-full max-w-6xl items-start gap-6 md:grid-cols-[180px_1fr] lg:grid-cols-[250px_1fr]">
           <nav
@@ -21,44 +21,41 @@ function SettingsPage() {
             x-chunk-container="chunk-container after:right-0"
           >
             <a href="#" className="font-semibold text-primary">
-              General
+              Geral
             </a>
-            <a href="#">Security</a>
-            <a href="#">Integrations</a>
-            <a href="#">Support</a>
-            <a href="#">Organizations</a>
-            <a href="#">Advanced</a>
+            <a href="#">Segurança</a>
+            <a href="#">Integrações</a>
+            <a href="#">Suporte</a>
+            <a href="#">Avançado</a>
           </nav>
           <div className="grid gap-6">
             <Card x-chunk="A form to update the store name." className="rounded-xl">
               <CardHeader>
-                <CardTitle>Store Name</CardTitle>
+                <CardTitle>Nome da empresa</CardTitle>
                 <CardDescription>
-                  Used to identify your store in the marketplace.
+                  Digite o nome da sua empresa.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form>
-                  <Input placeholder="Store Name" className="rounded-xl"/>
+                  <Input placeholder="Nome da empresa" className="rounded-xl"/>
                 </form>
               </CardContent>
               <CardFooter className="border-t px-6 py-4">
-                <Button className="rounded-xl">Save</Button>
+                <Button className="rounded-xl">Salvar</Button>
               </CardFooter>
             </Card>
             <Card x-chunk="A form to update the plugins directory with a checkbox to allow administrators to change the directory." className="rounded-xl">
               <CardHeader>
-                <CardTitle>Plugins Directory</CardTitle>
+                <CardTitle>Projetos </CardTitle>
                 <CardDescription>
-                  The directory within your project, in which your plugins are
-                  located.
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <form className="flex flex-col gap-4">
                   <Input
-                    placeholder="Project Name"
-                    defaultValue="/content/plugins"
+                    placeholder="Nome do projeto"
+                    defaultValue=""
                     className="rounded-xl"
                   />
                   <div className="flex items-center space-x-2">
@@ -67,13 +64,13 @@ function SettingsPage() {
                       htmlFor="include"
                       className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
                     >
-                      Allow administrators to change the directory.
+                      Permitir todos modificarem o projeto?
                     </label>
                   </div>
                 </form>
               </CardContent>
               <CardFooter className="border-t px-6 py-4">
-                <Button className="rounded-xl">Save</Button>
+                <Button className="rounded-xl">Salvar</Button>
               </CardFooter>
             </Card>
           </div>

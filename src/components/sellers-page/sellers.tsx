@@ -36,12 +36,10 @@ function SellersPage() {
           <Tabs defaultValue="all">
             <div className="flex items-center">
               <TabsList className="rounded-xl">
-                <TabsTrigger value="all" className="rounded-xl">All</TabsTrigger>
-                <TabsTrigger value="active" className="rounded-xl">Active</TabsTrigger>
-                <TabsTrigger value="draft" className="rounded-xl">Draft</TabsTrigger>
-                <TabsTrigger value="archived" className="hidden sm:flex rounded-xl">
-                  Archived
-                </TabsTrigger>
+                <TabsTrigger value="all" className="rounded-xl">Tudo</TabsTrigger>
+                <TabsTrigger value="active" className="rounded-xl">Ativo</TabsTrigger>
+                <TabsTrigger value="draft" className="rounded-xl">Rascunho</TabsTrigger>
+                <TabsTrigger value="archived" className="hidden sm:flex rounded-xl">Arquivado</TabsTrigger>
               </TabsList>
               <div className="ml-auto flex items-center gap-2">
                 <DropdownMenu>
@@ -49,32 +47,32 @@ function SellersPage() {
                     <Button variant="outline" size="sm" className="h-8 gap-1 rounded-xl">
                       <ListFilter className="h-3.5 w-3.5" />
                       <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                        Filter
+                        Filtro
                       </span>
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
-                    <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                    <DropdownMenuLabel>Filtrar por</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuCheckboxItem checked>
-                      Active
+                      Ativo
                     </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Rascunho</DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem>
-                      Archived
+                      Arquivado
                     </DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button size="sm" variant="outline" className="h-8 gap-1 rounded-xl">
                   <File className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Export
+                    Exportar
                   </span>
                 </Button>
                 <Button size="sm" className="h-8 gap-1 rounded-xl">
                   <PlusCircle className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Add Product
+                    Adicionar venda
                   </span>
                 </Button>
               </div>
@@ -82,9 +80,9 @@ function SellersPage() {
             <TabsContent value="all">
               <Card x-chunk="A list of products in a table with actions. Each row has an image, name, status, price, total sales, created at and actions." className="rounded-xl">
                 <CardHeader>
-                  <CardTitle>Products</CardTitle>
+                  <CardTitle>Vendas</CardTitle>
                   <CardDescription>
-                    Manage your products and view their sales performance.
+                    Gerencie seus vendas e visualize o desempenho.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>

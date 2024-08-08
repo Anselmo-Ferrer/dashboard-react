@@ -18,13 +18,10 @@ import {
   CardTitle,
 } from "@/components/ui/card"
 import { ChartConfig, ChartContainer } from "@/components/ui/chart"
-const chartData = [
-  { browser: "safari", visitors: 200, fill: "var(--color-safari)" },
-]
 
 const chartConfig = {
-  visitors: {
-    label: "Visitors",
+  clientes: {
+    label: "clientes",
   },
   safari: {
     label: "Safari",
@@ -32,12 +29,25 @@ const chartConfig = {
   },
 } satisfies ChartConfig
 
-export function RadialGraph() {
+type RadialGraphProps = {
+  title: string;
+  number: string;
+  date: string;
+  subtitle: string;
+  desc: string;
+};
+
+const RadialGraph = ({ title, number, date, subtitle, desc  }: RadialGraphProps) => {
+
+  const chartData = [
+    { browser: "safari", clientes: `${number}`, fill: "var(--color-safari)" },
+  ]
+
   return (
     <Card className="flex flex-col w-1/4 rounded-xl">
       <CardHeader className="items-center pb-0">
-        <CardTitle>Radial Chart - Text</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>{title}</CardTitle>
+        <CardDescription>{date}</CardDescription>
       </CardHeader>
       <CardContent className="flex-1 pb-0">
         <ChartContainer
@@ -58,7 +68,7 @@ export function RadialGraph() {
               className="first:fill-muted last:fill-background"
               polarRadius={[86, 74]}
             />
-            <RadialBar dataKey="visitors" background cornerRadius={10} />
+            <RadialBar dataKey="clientes" background cornerRadius={10} />
             <PolarRadiusAxis tick={false} tickLine={false} axisLine={false}>
               <Label
                 content={({ viewBox }) => {
@@ -75,14 +85,14 @@ export function RadialGraph() {
                           y={viewBox.cy}
                           className="fill-foreground text-4xl font-bold"
                         >
-                          {chartData[0].visitors.toLocaleString()}
+                          {chartData[0].clientes.toLocaleString()}
                         </tspan>
                         <tspan
                           x={viewBox.cx}
                           y={(viewBox.cy || 0) + 24}
                           className="fill-muted-foreground"
                         >
-                          Visitors
+                          clientes
                         </tspan>
                       </text>
                     )
@@ -95,12 +105,14 @@ export function RadialGraph() {
       </CardContent>
       <CardFooter className="flex-col gap-2 text-sm">
         <div className="flex items-center gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          {subtitle} <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          {desc}
         </div>
       </CardFooter>
     </Card>
   )
 }
+
+export default RadialGraph

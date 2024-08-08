@@ -21,7 +21,7 @@ function AdministrationPage() {
           <CardHeader>
             <CardTitle>Funcionarios</CardTitle>
             <CardDescription>
-              Invite your team members to collaborate.
+              Gerencie seus funcionarios.
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">

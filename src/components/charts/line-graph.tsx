@@ -72,8 +72,8 @@ export function LineGraph() {
   return (
     <Card className="rounded-xl w-1/2">
       <CardHeader>
-        <CardTitle>Line Chart - Dots</CardTitle>
-        <CardDescription>January - June 2024</CardDescription>
+        <CardTitle>Grafico API</CardTitle>
+        <CardDescription>Janeiro - Junho 2024</CardDescription>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -126,10 +126,10 @@ export function LineGraph() {
       </CardContent>
       <CardFooter className="flex-col items-start gap-2 text-sm">
         <div className="flex gap-2 font-medium leading-none">
-          Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+          Aumento de 2,5% esse mês <TrendingUp className="h-4 w-4" />
         </div>
         <div className="leading-none text-muted-foreground">
-          Showing total visitors for the last 6 months
+          Mostrando a quantidade de clientes nos ultimos 6 meses
         </div>
       </CardFooter>
     </Card>

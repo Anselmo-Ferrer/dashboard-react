@@ -121,7 +121,7 @@ const chartData = [
 
 const chartConfig = {
   visitors: {
-    label: "Visitors",
+    label: "Clientes",
   },
   desktop: {
     label: "Desktop",
@@ -153,9 +153,9 @@ export function AreaGraph2() {
     <Card className="rounded-xl">
       <CardHeader className="flex items-center gap-2 space-y-0 border-b py-5 sm:flex-row">
         <div className="grid flex-1 gap-1 text-center sm:text-left">
-          <CardTitle>Area Chart - Interactive</CardTitle>
+          <CardTitle>Grafico de desempenho</CardTitle>
           <CardDescription>
-            Showing total visitors for the last 3 months
+            Monstrando um total de teste nos ultimos 3 meses
           </CardDescription>
         </div>
         <Select value={timeRange} onValueChange={setTimeRange}>
@@ -167,13 +167,13 @@ export function AreaGraph2() {
           </SelectTrigger>
           <SelectContent className="rounded-xl">
             <SelectItem value="90d" className="rounded-lg">
-              Last 3 months
+              Ultimos 3 meses
             </SelectItem>
             <SelectItem value="30d" className="rounded-lg">
-              Last 30 days
+              Ultimos 30 dias
             </SelectItem>
             <SelectItem value="7d" className="rounded-lg">
-              Last 7 days
+              Ultimos 7 dias
             </SelectItem>
           </SelectContent>
         </Select>

@@ -29,11 +29,11 @@ function ClientsPage() {
           <Tabs defaultValue="all">
             <div className="flex items-center">
               <TabsList className="rounded-xl">
-                <TabsTrigger value="all" className="rounded-xl">All</TabsTrigger>
-                <TabsTrigger value="active" className="rounded-xl">Active</TabsTrigger>
-                <TabsTrigger value="draft" className="rounded-xl">Draft</TabsTrigger>
+                <TabsTrigger value="all" className="rounded-xl">Tudo</TabsTrigger>
+                <TabsTrigger value="active" className="rounded-xl">Ativos</TabsTrigger>
+                <TabsTrigger value="draft" className="rounded-xl">Rascunhos</TabsTrigger>
                 <TabsTrigger value="archived" className="hidden sm:flex rounded-xl">
-                  Archived
+                  Arquivados
                 </TabsTrigger>
               </TabsList>
               <div className="ml-auto flex items-center gap-2">
@@ -42,32 +42,32 @@ function ClientsPage() {
                     <Button variant="outline" size="sm" className="h-8 gap-1 rounded-xl">
                       <ListFilter className="h-3.5 w-3.5" />
                       <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                        Filter
+                        Filtro
                       </span>
                     </Button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent align="end">
-                    <DropdownMenuLabel>Filter by</DropdownMenuLabel>
+                    <DropdownMenuLabel>Filtrar</DropdownMenuLabel>
                     <DropdownMenuSeparator />
                     <DropdownMenuCheckboxItem checked>
-                      Active
+                      Ativos
                     </DropdownMenuCheckboxItem>
-                    <DropdownMenuCheckboxItem>Draft</DropdownMenuCheckboxItem>
+                    <DropdownMenuCheckboxItem>Rascunhos</DropdownMenuCheckboxItem>
                     <DropdownMenuCheckboxItem>
-                      Archived
+                      Arquivados
                     </DropdownMenuCheckboxItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
                 <Button size="sm" variant="outline" className="h-8 gap-1 rounded-xl">
                   <File className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Export
+                    Exportar
                   </span>
                 </Button>
                 <Button size="sm" className="h-8 gap-1 rounded-xl">
                   <PlusCircle className="h-3.5 w-3.5" />
                   <span className="sr-only sm:not-sr-only sm:whitespace-nowrap">
-                    Add Product
+                    Adicionar cliente
                   </span>
                 </Button>
               </div>
@@ -75,9 +75,9 @@ function ClientsPage() {
             <TabsContent value="all">
               <Card x-chunk="A list of products in a table with actions. Each row has an image, name, status, price, total sales, created at and actions." className="rounded-xl">
                 <CardHeader>
-                  <CardTitle>Products</CardTitle>
+                  <CardTitle>Clientes</CardTitle>
                   <CardDescription>
-                    Manage your products and view their sales performance.
+                    Gerencie seus clientes e visualize seu desempenho de vendas.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
@@ -85,21 +85,21 @@ function ClientsPage() {
                     <TableHeader>
                       <TableRow>
                         <TableHead className="hidden w-[100px] sm:table-cell">
-                          <span className="sr-only">Image</span>
+                          <span className="sr-only">Imagem</span>
                         </TableHead>
-                        <TableHead>Name</TableHead>
+                        <TableHead>Nome</TableHead>
                         <TableHead>Status</TableHead>
                         <TableHead className="hidden md:table-cell">
-                          Price
+                          Valor gasto
                         </TableHead>
                         <TableHead className="hidden md:table-cell">
-                          Total Sales
+                          Compras
                         </TableHead>
                         <TableHead className="hidden md:table-cell">
-                          Created at
+                          Criado em
                         </TableHead>
                         <TableHead>
-                          <span className="sr-only">Actions</span>
+                          <span className="sr-only">Ações</span>
                         </TableHead>
                       </TableRow>
                     </TableHeader>
@@ -107,7 +107,7 @@ function ClientsPage() {
                       <TableRow>
                         <TableCell className="hidden sm:table-cell">
                           <img
-                            alt="Product image"
+                            alt="cliente image"
                             className="aspect-square rounded-md object-cover"
                             height="64"
                             src="/placeholder.svg"
@@ -115,19 +115,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          Laser Lemonade Machine
+                          Cliente 1
                         </TableCell>
                         <TableCell>
-                          <Badge variant="outline">Draft</Badge>
+                          <Badge variant="outline">Rascunho</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $499.99
+                          R$ 499,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           25
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-07-12 10:42 AM
+                          13-09-2024 10:42
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -138,13 +138,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -160,19 +160,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          Hypernova Headphones
+                          Cliente 2
                         </TableCell>
                         <TableCell>
-                          <Badge variant="outline">Active</Badge>
+                          <Badge variant="outline">Ativo</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $129.99
+                          R$ 129,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           100
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-10-18 03:21 PM
+                          01-01-2024 15:00
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -183,13 +183,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -205,19 +205,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          AeroGlow Desk Lamp
+                          Cliente 3
                         </TableCell>
                         <TableCell>
-                          <Badge variant="outline">Active</Badge>
+                          <Badge variant="outline">Ativo</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $39.99
+                          R$ 39,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           50
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-11-29 08:15 AM
+                          01-01-2024 15:00
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -228,13 +228,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -250,19 +250,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          TechTonic Energy Drink
+                          Cliente 4
                         </TableCell>
                         <TableCell>
-                          <Badge variant="secondary">Draft</Badge>
+                          <Badge variant="secondary">Rascunho</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $2.99
+                          R$ 2,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          0
+                          1
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2023-12-25 11:59 PM
+                          01-01-2024 15:00
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -273,13 +273,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -295,19 +295,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          Gamer Gear Pro Controller
+                          Cliente 5
                         </TableCell>
                         <TableCell>
-                          <Badge variant="outline">Active</Badge>
+                          <Badge variant="outline">Ativo</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $59.99
+                          R$ 59,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           75
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2024-01-01 12:00 AM
+                          01-01-2024 12:00
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -318,13 +318,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar menu</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -340,19 +340,19 @@ function ClientsPage() {
                           />
                         </TableCell>
                         <TableCell className="font-medium">
-                          Luminous VR Headset
+                          Cliente 6
                         </TableCell>
                         <TableCell>
-                          <Badge variant="outline">Active</Badge>
+                          <Badge variant="outline">Ativo</Badge>
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          $199.99
+                          R$ 199,99
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
                           30
                         </TableCell>
                         <TableCell className="hidden md:table-cell">
-                          2024-02-14 02:14 PM
+                          14-02-2024 12:30
                         </TableCell>
                         <TableCell>
                           <DropdownMenu>
@@ -363,13 +363,13 @@ function ClientsPage() {
                                 variant="ghost"
                               >
                                 <MoreHorizontal className="h-4 w-4" />
-                                <span className="sr-only">Toggle menu</span>
+                                <span className="sr-only">Mostrar</span>
                               </Button>
                             </DropdownMenuTrigger>
                             <DropdownMenuContent align="end">
-                              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                              <DropdownMenuItem>Edit</DropdownMenuItem>
-                              <DropdownMenuItem>Delete</DropdownMenuItem>
+                              <DropdownMenuLabel>Ações</DropdownMenuLabel>
+                              <DropdownMenuItem>Editas</DropdownMenuItem>
+                              <DropdownMenuItem>Deletar</DropdownMenuItem>
                             </DropdownMenuContent>
                           </DropdownMenu>
                         </TableCell>
@@ -379,8 +379,8 @@ function ClientsPage() {
                 </CardContent>
                 <CardFooter>
                   <div className="text-xs text-muted-foreground">
-                    Showing <strong>1-10</strong> of <strong>32</strong>{" "}
-                    products
+                    Mostrando <strong>1-10</strong> de <strong>32</strong>{" "}
+                    Clientes
                   </div>
                 </CardFooter>
               </Card>
